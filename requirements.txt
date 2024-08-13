@@ -2,3 +2,4 @@ spotipy
 pandas
 python-dotenv
 indian-names
+pyspark
