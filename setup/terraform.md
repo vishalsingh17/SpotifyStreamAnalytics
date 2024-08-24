@@ -55,7 +55,7 @@ Used to create a Delta change data capture job.
 Open the `terraform/terraform.tfvars` file & update the resource, keyvault variable names as per your requirements.
 
 ## Initialize Terraform:
-Open a terminal and navigate to your Terraform directory (`spotify-stream-analytics/terraform`). Run the following command to initialize Terraform:
+Open a terminal and navigate to your Terraform directory (`SpotifyStreamAnalytics/terraform`). Run the following command to initialize Terraform:
 
 ```bash
 terraform init

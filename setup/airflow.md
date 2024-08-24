@@ -7,7 +7,7 @@ This document guides you through setting up Airflow for orchestrating your Spoti
 
 - The [default Airflow Docker Compose](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#fetching-docker-compose-yaml) file uses Celery executor and additional components, requiring significant resources.
 - We've created a custom Docker Compose file optimized for local use with a local executor, reducing resource footprint.
-- Find the custom file here: [lightweight airflow](https://github.com/abdkumar/spotify-stream-analytics/blob/main/airflow/docker-compose.yml)
+- Find the custom file here: [lightweight airflow](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/airflow/docker-compose.yml)
 
 
 **[Reference](https://medium.com/@alexroperez4/docker-airflow-gcp-80ef9280fbd3)**
@@ -24,7 +24,7 @@ This document guides you through setting up Airflow for orchestrating your Spoti
 ### Accessing Keyvault for Credentials:
 
 - Airflow accesses Snowflake and Databricks connections stored in Azure Keyvault.
-- Follow the instructions provided [here](https://github.com/abdkumar/spotify-stream-analytics/blob/main/setup/azure.md#create-app-using-app-registrations) to set up credentials in Keyvault.
+- Follow the instructions provided [here](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/setup/azure.md#create-app-using-app-registrations) to set up credentials in Keyvault.
 - Update the `.env` file in the Airflow directory with tenant_id, client_secret, and client_id retrieved from Keyvault.
 - Make sure snowflake & databrcks related credentials are set in Azure keyvault.
 
@@ -44,12 +44,12 @@ ssh user@ipaddress
 ```
 
 ```bash
-cd ~/spotify-stream-analytics/airflow
+cd ~/SpotifyStreamAnalytics/airflow
 docker compose up airflow-init
 ```
 ### 2. Start all services:
 ```bash
-cd ~/spotify-stream-analytics/airflow
+cd ~/SpotifyStreamAnalytics/airflow
 docker compose up -d
 ```
 

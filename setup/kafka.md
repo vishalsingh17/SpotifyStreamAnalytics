@@ -15,12 +15,12 @@ sudo apt update && \
 sudo apt upgrade && \
 sudo apt-get install vim && \
 sudo apt-get install git && \
-git clone https://github.com/abdkumar/spotify-stream-analytics.git
+git clone https://github.com/vishalsingh17/SpotifyStreamAnalytics.git
 ```
 
 - Install docker & docker-compose
 ```bash
-bash ~/spotify-stream-analytics/scripts/vm_setup.sh && \
+bash ~/SpotifyStreamAnalytics/scripts/vm_setup.sh && \
 exec newgrp docker
 ```
 - Check Docker Installation
@@ -41,7 +41,7 @@ export KAFKA_EVENTS_TOPIC=TOPIC_NAME
 
 - Start Kafka
 ```bash
-bash ~/spotify-stream-analytics/scripts/kafka_setup.sh && \ 
+bash ~/SpotifyStreamAnalytics/scripts/kafka_setup.sh && \ 
 docker ps
 ``` 
 **Note**: In case `docker ps` is not showing `kafka` and `zookeeper` containers. You should just stop all the containers with `docker compose down` and then rerun bash script.

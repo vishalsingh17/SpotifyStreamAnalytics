@@ -29,14 +29,14 @@ A resource group is a container that holds related resources for an Azure soluti
 
 1. Navigate to Resource groups in the Azure Portal.
 2. Click Create resource group.
-3. For Resource group name, enter `spotify-stream-analytics`.
+3. For Resource group name, enter `SpotifyStreamAnalytics`.
 4. Select `East US` from the Region dropdown.
 5. Click Create.
 
 [Reference](https://techcommunity.microsoft.com/t5/startups-at-microsoft/step-by-step-guide-creating-an-azure-resource-group-on-azure/ba-p/3792368)
 
 # Resource Group Access Configuration
-1. Navigate to `spotify-stream-analytics` Resource group.
+1. Navigate to `SpotifyStreamAnalytics` Resource group.
 2. Click on `Access Contorl (IAM)` again. Select "Role" as `Contributor` and assign it to the app you created before, `terraform-user`.
 
 # Create Key Vault
@@ -44,7 +44,7 @@ Azure Key Vault is a cloud service for securely storing and accessing secrets. A
 
 1. Navigate to Key Vaults in the Azure Portal.
 2. Click Create key vault.
-3. Under Resource group, select `spotify-stream-analytics`.
+3. Under Resource group, select `SpotifyStreamAnalytics`.
 4. For Key vault name, enter `spotify-poc-keyvault`.
 5. Select `East US` from the Location dropdown.
 6. In Access Configuration section, Select `Vault access Policy` permission model.

@@ -11,7 +11,7 @@ ssh user@ipaddress
 
 Configure Spark and install Python dependencies with requirements.txt.
 ```bash
-bash  ~/spotify-stream-analytics/scripts/spark_setup.sh
+bash  ~/SpotifyStreamAnalytics/scripts/spark_setup.sh
 ```
 ## Creating a Spotify API Account 
 creating a Spotify API account and obtaining your client ID and secret
@@ -41,7 +41,7 @@ creating a Spotify API account and obtaining your client ID and secret
 ## Setting up of Environment Variables
 Cnfiguring Kafka connection details in a `.env` file for producing Spotify stream events. <br>
 
-*NOTE: For reference and verification, you can consult the `spotify-stream-analytics/kafka/docker-compose.yml` file. This file typically defines the configuration parameters used for the Kafka broker within the Docker container environment.*
+*NOTE: For reference and verification, you can consult the `SpotifyStreamAnalytics/kafka/docker-compose.yml` file. This file typically defines the configuration parameters used for the Kafka broker within the Docker container environment.*
 
 **1. Required Environment Variables:**
 
@@ -55,7 +55,7 @@ Make sure `.env` file has following environment variables set
 
 ## Updating Event generation configurations
 Modifying these parameters allows you to fine-tune the generated data set according to your specific needs.
-#### File Location: `spotify-stream-analytics/data/config.yml`
+#### File Location: `SpotifyStreamAnalytics/data/config.yml`
 
 **Key Parameters:**
 
@@ -94,7 +94,7 @@ Feel free to customize this further with specific instructions, code snippets, o
 Generating and publishing simulated Spotify stream events using Kafka, based on a configuration file and utilizing Python libraries.
 
 ```bash
-cd  ~/spotify-stream-analytics/data/ && \
+cd  ~/SpotifyStreamAnalytics/data/ && \
 python3 main.py
 ```
 **1. Configuration:**

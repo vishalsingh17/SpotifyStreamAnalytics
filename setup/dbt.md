@@ -47,7 +47,7 @@ we are orchestration the dbt transforamtions using airflow DAG's so add these va
 - sfDbtRole: Snowflake role with proper grants (dev_role in our case)
 - sfWarehouse: Snowflake warehouse name
 
-**[check snowflake configuration](https://github.com/abdkumar/spotify-stream-analytics/blob/main/setup/snowflake.md)**
+**[check snowflake configuration](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/setup/snowflake.md)**
 
 To run dbt locally, you have two options:
 - Hardcode the variables in profiles.yml: Edit the profiles.yml file and directly replace the placeholder values with your actual credentials.
@@ -83,11 +83,11 @@ Copying the dbt project directly into the Airflow DAGs directory is discouraged.
 **2. Orchestrate with Airflow DockerOperator:**
 - Create an Airflow DAG with a DockerOperator task.
 - Specify the spotify-dbt:latest image in the operator.
-- Mount the dbt project directory (e.g., ~/spotify-stream-analytics/dbt) as a volume within the container.
+- Mount the dbt project directory (e.g., ~/SpotifyStreamAnalytics/dbt) as a volume within the container.
 - Pass environment variables containing sensitive information (e.g., passwords) at runtime using the env parameter in the `DockerOperator`.
 
 ```bash
-cd ~/spotify-stream-analytics/dbt
+cd ~/SpotifyStreamAnalytics/dbt
 docker build -t spotify-dbt:latest .
 ```
 

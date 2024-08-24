@@ -12,7 +12,7 @@ Managing secrets begins with creating a secret scope. A secret scope is collecti
 
 To ensure secure and controlled access to sensitive credentials, we leverage Azure Key Vault as our primary storage. To integrate this with Databricks, we should've assigned permission to databricks and enabled Public Access in Network Settings of KeyVault.
 
-**[Check the steps](https://github.com/abdkumar/spotify-stream-analytics/blob/main/setup/azure.md)**
+**[Check the steps](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/setup/azure.md)**
 
 Go to `https://<databricks-instance>#secrets/createScope`. This URL is case sensitive; scope in createScope must be uppercase. 
 
@@ -39,10 +39,10 @@ Read more about secret scope settings [here](https://learn.microsoft.com/en-us/a
 | `adls-folder-path` | Give the folder path where spark processed delta lake is stored| <FOLDER PATH\> |
 
 
-Make sure the Snowflake configuration is matched with **[Snowflake Workspace](https://github.com/abdkumar/spotify-stream-analytics/blob/main/setup/snowflake.md)**
+Make sure the Snowflake configuration is matched with **[Snowflake Workspace](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/setup/snowflake.md)**
 
 
-Make sure the ADLS configuration is matched with **[Spark Streaming Configuration](https://github.com/abdkumar/spotify-stream-analytics/blob/main/setup/spark.md)**
+Make sure the ADLS configuration is matched with **[Spark Streaming Configuration](https://github.com/vishalsingh17/SpotifyStreamAnalytics/blob/main/setup/spark.md)**
 
 
 # Create a Databricks Job
@@ -53,7 +53,7 @@ We'll cover uploading the notebook, creating a single-node cluster, reviewing th
 1. Access your Databricks workspace.
 2. Navigate to the Workspace pane and click on Notebooks.
 3. Click on Import.
-4. Select From Git URL and paste the URL of the notebook: https://github.com/abdkumar/spotify-stream-analytics/tree/main/cdc
+4. Select From Git URL and paste the URL of the notebook: https://github.com/vishalsingh17/SpotifyStreamAnalytics/tree/main/cdc
 5. Select the .dbc file and click Import.
 
 The notebook will be imported into your Databricks workspace.
